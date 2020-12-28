@@ -13,7 +13,7 @@ require('dotenv').config()
 
 const MongoClient = require('mongodb').MongoClient;
 
-const uri = "mongodb+srv://swasthikjp:swasthikjp@cluster0.qpm62.mongodb.net/Shipbox?retryWrites=true&w=majority";
+const uri = "ask for this";
 const client = new MongoClient(uri, { useNewUrlParser: true,useUnifiedTopology: true  });
 let collection=null;
 
