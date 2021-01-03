@@ -38,10 +38,10 @@ app.post('/create-order',async(req,res)=>{
 
     try{
         await collection.insertOne(data);
-        res.send('OK').status(200);
+        res.status(200).send('OK');
         console.log("order created")
     }catch (err){
-        res.send(err).status(500)
+        res.status(500).send(err)
         console.log(err)
     }
 })
@@ -50,11 +50,11 @@ app.post('/create-order',async(req,res)=>{
 app.get('/orders',async(req,res)=>{
     try{
        var data= await collection.find().toArray();
-res.send(data).status(200)
+res.status(200).send(data)
     console.log(data)
     }catch (err){
         console.log(err);
-        res.send(err).status(500);
+        res.status(500).send(err);
     }
 })
 
